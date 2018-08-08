@@ -15,15 +15,14 @@ import android.widget.EditText;
  * and save data to a file by that name.
  *
  * @author Justin Mechanye
- * @date 4/27/18
+ * @version  4/27/18
  */
 public class SaveFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    //These are used to initialize the fragment based on param1, and param2.
     private String mParam1;
     private String mParam2;
 
@@ -86,6 +85,7 @@ public class SaveFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_save, container, false);
         ed1= v.findViewById(R.id.edit1);
         go= v.findViewById(R.id.button);
+        //This allows the fragment to respond to being touched.
         this.go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,7 +129,10 @@ public class SaveFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
+        /**
+         * When the save button is pressed follow instructions from the implemented interface.
+         * @param b The name of the file.
+         */
         void onButtonPress(String b);
     }
 }

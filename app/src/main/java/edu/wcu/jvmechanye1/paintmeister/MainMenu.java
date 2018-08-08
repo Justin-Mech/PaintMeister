@@ -13,7 +13,7 @@ import java.io.File;
  * This is the Main Menu for the application with two buttons new, and load.
  *
  * @author Justin Mechanye
- * @date 4/27/18
+ * @version 4/27/18
  */
 public class MainMenu extends AppCompatActivity implements View.OnClickListener {
     /**

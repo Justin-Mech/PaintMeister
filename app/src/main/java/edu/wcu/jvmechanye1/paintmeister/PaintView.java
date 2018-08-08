@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Motion events and draw lines to the view of various colors and widths.
  *
  * @author  Justin Mechanye
- * @date 4/27/18
+ * @version 4/27/18
  */
 public class PaintView extends View implements View.OnTouchListener {
 

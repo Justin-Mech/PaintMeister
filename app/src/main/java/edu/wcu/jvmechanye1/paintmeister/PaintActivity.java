@@ -27,8 +27,8 @@ import java.util.ArrayList;
  * The PaintActivity class handles the interaction between fragments, text fields, and the
  * paint space for a finger painting app.
  *
- * @Author Justin Mechanye
- * @Date 4/27/18
+ * @author Justin Mechanye
+ * @version 4/27/18
  */
 public class PaintActivity extends AppCompatActivity implements
         ColorPickFrag.OnFragmentInteractionListener, SaveFragment.OnFragmentInteractionListener{
@@ -208,6 +208,7 @@ public class PaintActivity extends AppCompatActivity implements
 
             while((line=bf.readLine())!= null){
                 linesLoad=new ArrayList<>();
+
                 //Parse the first line into segments.
                 String[] contents = line.split(":");
                 Log.v("size",""+contents.length);
@@ -215,7 +216,8 @@ public class PaintActivity extends AppCompatActivity implements
                 //Collect the color to be added to each line.
                 String color= contents[0];
                 float lineWidth= Float.parseFloat(contents[1]);
-                //Starting at location 2 get coordinates at 2-5 and make a line.
+
+                //Starting at location 2 get (x1,y1) and (x2,y2) then draw the line.
                 for(int i=2; i+3<contents.length;i+=4){
                     float x1 = Float.parseFloat(contents[i]);
                     float y1 = Float.parseFloat(contents[i+1]);
@@ -289,7 +291,7 @@ public class PaintActivity extends AppCompatActivity implements
     }
 
     /**
-     * Does a save with shared preferences.
+     * Saves the brush width and color if the app is exited.
      * @param v
      */
     private void savePref(View v){
@@ -303,8 +305,8 @@ public class PaintActivity extends AppCompatActivity implements
     }
 
     /**
-     * Loads from shared Preferences (Default values.
-     * @param v
+     * Loads from shared Preferences the brush color and brush width.
+     * @param v The views that control the saved information.
      */
     private void loadPref(View v){
         SharedPreferences sp= getSharedPreferences("SCPref",Context.MODE_PRIVATE);
@@ -313,7 +315,8 @@ public class PaintActivity extends AppCompatActivity implements
     }
 
     /**
-     * Saves instance state.
+     * Saves instance state to allow chosen brush color and width to persist if the user
+     * leaves the page.
      * @param savedInstanceState
      */
     public void onSaveInstanceState(Bundle savedInstanceState){
