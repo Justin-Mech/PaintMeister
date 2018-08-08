@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">PAINT MEISTER</string>
+
+    <string name="mbtext1">New</string>
+    <string name="mbtext2">Load</string>
+
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="width">Choose Width </string>
+
+    <string name="sComplete">Save successful</string>
+    <string name="loadFail">File Not Found Load failed</string>
+    <string name="loadIO">I/O Exception Load Failed</string>
+    <string name="saveNF">File Not Found Save Failed</string>
+    <string name="saveIO">I/O Exception Save Failed</string>
+    <string name="saveFile">Enter file name without Extension</string>
+    <string name="emptyText">Must enter file name</string>
+
+    <!--The list of color names presented in the color picker.-->
+    <string-array name="colors">
+        <item>black</item>
+        <item>white</item>
+        <item>blue</item>
+        <item>red</item>
+        <item>green</item>
+        <item>yellow</item>
+        <item>magenta</item>
+        <item>cyan</item>
+    </string-array>
+
+
+</resources>

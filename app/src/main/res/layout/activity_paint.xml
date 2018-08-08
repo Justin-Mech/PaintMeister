@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="12"
+    android:background="@drawable/gradient_back"
+    tools:context="edu.wcu.jvmechanye1.paintmeister.PaintActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:id="@+id/current_color"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" "
+            android:id="@+id/current_width"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <view
+        class="edu.wcu.jvmechanye1.paintmeister.PaintView"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:layout_margin="10sp"
+        android:id="@+id/view1"
+        />
+
+    <fragment
+        android:name="edu.wcu.jvmechanye1.paintmeister.ColorPickFrag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/listFrag"/>
+</LinearLayout>

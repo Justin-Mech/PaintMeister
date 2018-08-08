@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Colors pick-able by this app include white black purple blue red yellow
+    green cyan brown pink.-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="purple">#592c88</color>
+    <color name="blue">#0000FF</color>
+    <color name="red">#ff0000</color>
+    <color name="yellow">#ffff00</color>
+    <color name="green">#00ff00</color>
+    <color name="cyan">#00ffff</color>
+    <color name="brown">#603000</color>
+    <color name="pink">#ff00ff</color>
+</resources>
